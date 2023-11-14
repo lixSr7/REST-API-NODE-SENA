@@ -1,57 +1,41 @@
 // Importamos express
-const express = require("express");
+import express, { json } from "express";
+import router from "./Routes/PublicationsRoute.js";
+import cors from 'cors'
+
 // Creamos la API
 const app = express();
+
+
 
 /* 
 Configuro el midwlare para poder
 recupesrar los datos con los mtodos (POST, PUT, PATH)
 */
-app.use(express.json());
+app.use(json());
 
+app.use(cors())
 
-// Cremos los enpoints para realizar acciones del CRUD
-app.get("/", (request, response) => {
-  response.json("Hi, Welcome the API Cookie Publications");
-});
-
-app.get("/Publications", (request, response) => {
-  response.json({ message: "Welcome To server" });
-});
-
-app.get("/:id", (request, response) => {
-  const { id } = request.params;
-  response.send(id);
-});
-
-
-// Actualizar data
-
-app.patch("/Publications", (request, response) => {
-  const data = request.body;
-  response.json(data);
-});
-
-// Eliminar data
+app.use('/publications',router)
 
 // Manejo de CORS con metodos complejos
-app.options('*', (request, response)=>{
+// app.options('*', (request, response)=>{
 
-  // Defino las URLS que puden acceder
-  response.header(
-    'Access-Control-Allow-Origin',
-    '*'
-  )
-  // Defino los Metodos permitidos
-  response.header(
-    'access-control-allow-methods',
-    'GET',
-    'POST',
-    'DELETE',
-    'PUT',
-    'PATCH'
-  )
-})
+//   // Defino las URLS que puden acceder
+//   response.setHeader(
+//     'Access-Control-Allow-Origin',
+//     '*'
+//   )
+//   // Defino los Metodos permitidos
+//   response.setHeader(
+//     'access-control-allow-methods',
+//     'GET',
+//     'POST',
+//     'DELETE',
+//     'PUT',
+//     'PATCH'
+//   )
+// })
 
 // Definimos el servidor de la Api
 const PORT = process.env.PORT || 1234; // Definimos el puerto
