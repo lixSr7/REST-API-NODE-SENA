@@ -1,0 +1,35 @@
+[
+  {
+    "Id": 1,
+    "NickName": "Snaider ARS",
+    "FullName": "Snaider Armando Rnagel Rondos",
+    "PhotoURL": "https://www.los40.do/wp-content/uploads/2023/10/16880295953133-e1696339269651-300x300.jpeg",
+    "lastLogin": "20-02-2023-10-30-40",
+    "Posts": [
+      {
+        "Id": 1,
+        "UserId": 2,
+        "Content": "Hi, My name is BZRP",
+        "ImageURL": "https://www.instagram.com/p/Cx6b11aLbAo/?hl=es",
+        "CreateAt": "20-02-2023-10-30-40",
+        "IsDisable": false
+      },
+      {
+        "Id": 1,
+        "UserId": 2,
+        "Content": "Hi, My name is Isabell",
+        "ImageURL": "https://nextui-docs-v2.vercel.app/images/album-cover.png",
+        "CreateAt": "20-02-2023-10-30-40",
+        "IsDisable": false
+      },
+      {
+        "Id": 1,
+        "UserId": 3,
+        "Content": "Hi, My name is Next Ui",
+        "ImageURL": "https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg",
+        "CreateAt": "20-02-2023-10-30-40",
+        "IsDisable": false
+      }
+    ]
+  }
+]
