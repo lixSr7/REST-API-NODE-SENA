@@ -1,1 +1,5 @@
 GET   http://localhost:1234/Publications
+
+### Delete Publication
+
+DELETE http://localhost:1234/Publications/655434cabe1df3b074d8e5e4

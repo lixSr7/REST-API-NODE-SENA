@@ -1,11 +1,20 @@
-import z, { string } from 'zod';
+import mongoose from "mongoose";
 
-const publicationScheme = z.object({
-    fullName:string(),
-    nickName:string(),
-    photoURL:string().url(),
-    post:{
-        content:string().maxLength(280),
-        imageUrl:string().url()
-    }
-})
+export const PostSchema = new mongoose.Schema({
+  Id: Number,
+  UserId: Number,
+  Content: String,
+  ImageURL: String,
+  CreateAt: String,
+  IsDisable: Boolean,
+});
+
+export const UserSchema = new mongoose.Schema({
+  Id: Number,
+  NickName: String,
+  FullName: String,
+  PhotoURL: String,
+  lastLogin: String,
+  Posts: [PostSchema],
+});
+

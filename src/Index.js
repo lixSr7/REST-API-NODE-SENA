@@ -16,26 +16,17 @@ app.use(json());
 
 app.use(cors())
 
-app.use('/publications',router)
+app.use('/publications', router)
 
-// Manejo de CORS con metodos complejos
-// app.options('*', (request, response)=>{
 
-//   // Defino las URLS que puden acceder
-//   response.setHeader(
-//     'Access-Control-Allow-Origin',
-//     '*'
-//   )
-//   // Defino los Metodos permitidos
-//   response.setHeader(
-//     'access-control-allow-methods',
-//     'GET',
-//     'POST',
-//     'DELETE',
-//     'PUT',
-//     'PATCH'
-//   )
-// })
+
+// import mongoose from 'mongoose';
+
+// const uri = 'mongodb+srv://root:0000@sena.8siju36.mongodb.net/';
+// mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => console.log('Conexión a MongoDB Atlas exitosa'))
+//   .catch((error) => console.error('Error conectando a MongoDB Atlas:', error));
+
 
 // Definimos el servidor de la Api
 const PORT = process.env.PORT || 1234; // Definimos el puerto
